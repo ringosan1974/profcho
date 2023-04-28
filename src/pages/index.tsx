@@ -1,3 +1,23 @@
+import { useState } from "react";
+
 export default function Home() {
-  return (<h1>Hello Next.js</h1>);
+  const [userdata, setUserData] = useState({
+    name: "", nickname: "", birthday: "", character: "", charmpoint: "", hobby: "", skill: ""
+  });
+  return (
+    <div>
+      <h1>プロフ帳ジェネレーター</h1>
+      <form action="./generate.tsx" method="post">
+        {Object.keys(userdata).map((data) => {
+          return(
+            <div>
+              <label htmlFor={data}>{data} : </label>
+              <input type="text" id={data} name={data} />
+            </div>
+          );
+        })}
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
 }

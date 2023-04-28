@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <div>
       <h1>プロフ帳ジェネレーター</h1>
-      <form action="./generate.tsx" method="post">
+      <p>プロフ帳を作成します！</p>
+      <form action="/generate" method="get">
         {Object.keys(userdata).map((data) => {
           return(
             <div>

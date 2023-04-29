@@ -1,9 +1,14 @@
+//TODO: birthdayの項目をカレンダー選択にする
+
+
 import { useState } from "react";
+
 
 export default function Home() {
   const [userdata, setUserData] = useState({
     name: "", nickname: "", birthday: "", character: "", charmpoint: "", hobby: "", skill: ""
   });
+
   return (
     <div>
       <h1>プロフ帳ジェネレーター</h1>

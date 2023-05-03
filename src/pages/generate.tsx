@@ -22,7 +22,6 @@ export default function Gen() {
                 ctx.fillText("hello world", 120, 200);
             };
             image.src = "/resource/test.jpg";
-            setImageURL(Canvas.toDataURL("image/jpeg"));
         }
     }, []);
 
